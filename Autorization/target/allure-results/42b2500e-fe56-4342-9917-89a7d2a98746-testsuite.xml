@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1453738759477" stop="1453738788823" version="1.4.16" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Surefire suite : Surefire test</name>
+    <title>Surefire suite : Surefire test</title>
+    <test-cases>
+        <test-case start="1453738759790" stop="1453738788384" status="passed">
+            <name>loginTest</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="Marina-PC"/>
+                <label name="thread" value="7252@Marina-PC.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>
