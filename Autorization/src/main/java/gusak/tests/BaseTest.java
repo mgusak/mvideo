@@ -5,14 +5,11 @@ import gusak.buttons.ButtonsService;
 import gusak.services.browser.Browser;
 import gusak.services.browser.BrowserService;
 import org.openqa.selenium.By;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 
-
-public class BaseTest {
+public class BaseTest
+{
     public static final String PAGE_URL = "https://www.atguat5.mvideo.ru/";
 
     String email = "testuser321@mailforspam.com"; //e-mail
@@ -22,17 +19,18 @@ public class BaseTest {
 
     public static final Browser browser = BrowserService.openNewBrowser();
 
-
     @BeforeSuite
-    public void openPage() {
+    public void openPage()
+    {
         browser.openPage(PAGE_URL);
 
     }
 
-//    @AfterSuite
-//    public void closePage() {
-//        browser.close();
-//    }
+    @AfterSuite
+    public void closePage()
+    {
+        browser.close();
+    }
 
 
 }

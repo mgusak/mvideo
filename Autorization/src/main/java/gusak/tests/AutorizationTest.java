@@ -15,7 +15,7 @@ public class AutorizationTest extends BaseTest
     @Test
     public void loginTest()
     {
-        browser.click(By.linkText("Войти"));
+        browser.click(By.xpath("/html/body/div[2]/div/div[2]/div/div[4]/div/div[2]/div[3]/ul/li[1]/a"));
         browser.typeText(loginEl, email);
         browser.typeText(passEl, passw);
 
