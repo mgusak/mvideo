@@ -55,7 +55,7 @@ public class BaseTest
     public void closePage()
 
     {
-      //  browser.close();
+       browser.close();
     }
 
     public void typePhone()

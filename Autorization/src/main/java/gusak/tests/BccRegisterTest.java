@@ -1,7 +1,6 @@
 package gusak.tests;
 
 import org.openqa.selenium.By;
-import org.testng.annotations.Test;
 
 /**
  * Created by Марина on 28.02.2016.
