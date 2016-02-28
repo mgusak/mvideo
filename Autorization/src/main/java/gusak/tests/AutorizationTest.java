@@ -15,13 +15,13 @@ public class AutorizationTest extends BaseTest
     @Test
     public void loginTest()
     {
-        browser.click(By.xpath("/html/body/div[2]/div/div[2]/div/div[4]/div/div[2]/div[3]/ul/li[1]/a"));
+        browser.click(By.xpath("//div[@class=\"header-login\"]//li[1]/a[1]"));
         browser.typeText(loginEl, email);
         browser.typeText(passEl, passw);
 
         browser.click(By.xpath(ButtonsService.getXpath(Buttons.LOGIN)));
 
-        Assert.assertTrue(browser.getValue(BaseTest.userHeader).contains("Привет"));
+        Assert.assertTrue(browser.getValue(userHeader).contains("Привет"));
 
     }
 }

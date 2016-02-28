@@ -75,6 +75,9 @@ public class Browser implements Closeable
 
         WebElement element2 = webDriver.findElement(element);
 
+        //element.getLocationOnScreenOnceScrolledIntoView();
+        ((JavascriptExecutor)webDriver).executeScript("arguments[0].scrollIntoView();"
+                ,element2);
         Actions actions = new Actions(webDriver);
 
         actions.moveToElement(element2).click().perform();
@@ -87,6 +90,32 @@ public class Browser implements Closeable
         return this;
     }
 
+    public void mouseOver(By element)
+    {
+
+
+        Actions action = new Actions(webDriver);
+        WebElement elem = webDriver.findElement(element);
+        action.moveToElement(elem);
+        action.perform();
+        this.sleep(2);
+    }
+
+    public void sleep(int seconds)
+    {
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+
+        }
+    }
+
+    public void scrollDown()
+    {
+        JavascriptExecutor jse = (JavascriptExecutor)webDriver;
+        jse.executeScript("window.scrollBy(0,350)", "");
+    }
+
     public String getValue(By element)
     {
         return getElement(element).getText();
@@ -95,6 +124,6 @@ public class Browser implements Closeable
     @Override
     public void close()
     {
-        webDriver.close();
+        webDriver.quit();
     }
 }

@@ -4,5 +4,6 @@ gusak\services\browser\BrowserService.class
 gusak\tests\BaseTest.class
 gusak\services\browser\Browser.class
 gusak\buttons\ButtonsService.class
+gusak\tests\RegistrationSimpleTest.class
 gusak\tests\AutorizationTest.class
 gusak\utils\ImageUtils.class
